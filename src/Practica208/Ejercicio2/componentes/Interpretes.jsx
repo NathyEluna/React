@@ -3,13 +3,12 @@ import movies from "../objeto/peliculas.json";
 
 //Función para buscar la información de cada actor el el fichero pelicula.json y mostrar en la página.
 const Interpretes = () => {
-    const peliculas = movies.peliculas.map(pelicula => {return{...pelicula}});
-    const actores = [...peliculas.actores];
+    const peliculas = [movies.peliculas.map(pelicula => {return{...pelicula}})];
 
     return(
         <>
             <div>
-               {actores.map((actor) => {
+               {peliculas.map((actor) => {
                 return(
                     <Interprete
                     key={actor.nombre}
