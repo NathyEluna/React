@@ -1,22 +1,18 @@
 import Interpretes from './Interpretes.jsx';
 import "./Pelicula.css";
-import movie from "../objeto/pelicula.json";
 
 //Función para formatear la manera que la película aparece en la página.
 const Pelicula = (props) => {
-    const {children} = props;
-    //Constante para buscar los datos de la película el en archivo pelicula.json
-    //La primera vez que intenté llamar al objeto, había utilizado [] y claro que no funcionaba.
-    const pelicula = {...movie.pelicula};
+    const {nombre, director, cartelera, actores, children} = props;
 
     return(
         <>
             <section>
-                <h1 className="pelicula-titulo">{pelicula.nombre}</h1>
-                <h2 className="pelicula-subtitulo">{pelicula.director}</h2>
+                <h1 className="pelicula-titulo">{nombre}</h1>
+                <h2 className="pelicula-subtitulo">{director}</h2>
                 <section className="pelicula-info">
                     <div className="pelicula-cartela">
-                        <img src={pelicula.cartelera}/>
+                        <img src={cartelera}/>
                     </div>
                     <div className="pelicula-resumen">
                         <h3>Resumen</h3>
@@ -25,7 +21,7 @@ const Pelicula = (props) => {
                 </section>
                 <h1 className="pelicula-titulo">Elenco</h1>
                 <div className="pelicula-elenco">
-                    <Interpretes/>
+                    <Interpretes actores={actores}/>
                 </div>
             </section>
         </>

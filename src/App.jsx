@@ -7,14 +7,17 @@ import movie from "./Practica208/Ejercicio1/objeto/pelicula.json";
 import Peliculas from "./Practica208/Ejercicio2/componentes/Peliculas.jsx";
 
 function App() {
-  const pelicula = {...movie.pelicula};
   return (
     <>
       <section>
         <h1>Ejercício 1</h1>
         <Contenedor>
-          <Pelicula>
-            {pelicula.resumen}
+          <Pelicula
+          nombre={movie.pelicula.nombre}
+          director={movie.pelicula.director}
+          cartelera={movie.pelicula.cartelera}
+          actores={movie.pelicula.actores}>
+            {movie.pelicula.resumen}
           </Pelicula>
         </Contenedor>
       </section>

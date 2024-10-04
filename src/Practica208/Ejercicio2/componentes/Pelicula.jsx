@@ -3,7 +3,7 @@ import "./Pelicula.css";
 
 //Función para formatear la manera que la película aparece en la página.
 const Pelicula = (props) => {
-    const {nombre, director, cartelera, children} = props;
+    const {nombre, director, cartelera, actores, children} = props;
 
     return(
         <>
@@ -21,7 +21,7 @@ const Pelicula = (props) => {
                 </section>
                 <h1 className="pelicula-titulo">Elenco</h1>
                 <div className="pelicula-elenco">
-                    <Interpretes/>
+                    <Interpretes actores={actores}/>
                 </div>
             </section>
         </>
