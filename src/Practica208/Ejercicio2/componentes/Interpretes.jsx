@@ -13,7 +13,7 @@ const Interpretes = (props) => {
                         key={actor.nombre}
                         nombre={actor.nombre}
                         imagen={actor.imagen}
-                        biografia={actor.imagen}/>
+                        biografia={actor.biografia}/>
                     )
                 })}
             </div>
