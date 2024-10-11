@@ -1,12 +1,12 @@
 import Pelicula from "./Pelicula.jsx";
-import movies from "../objeto/peliculas.json";
 
-const Peliculas = () => {
+const Peliculas = (props) => {
+    const {peliculas} = props;
     return(
         <>
             <div>
-                {movies.peliculas.length
-                    ? movies.peliculas.map((pelicula) => {
+                {peliculas.length
+                    ? peliculas.map((pelicula) => {
                         return (
                             <Pelicula
                             key={pelicula.id}

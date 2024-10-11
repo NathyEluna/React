@@ -5,6 +5,7 @@ import Pelicula from "./Practica208/Ejercicio1/componentes/Pelicula.jsx";
 import movie from "./Practica208/Ejercicio1/objeto/pelicula.json";
 //Imports del ejercicio 2.
 import Peliculas from "./Practica208/Ejercicio2/componentes/Peliculas.jsx";
+import movies from "./Practica208/Ejercicio2/objeto/peliculas.json";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
       <section>
       <h1>Ejercício 2</h1>
         <Contenedor>
-          <Peliculas/>
+          <Peliculas peliculas={movies.peliculas}/>
         </Contenedor>
       </section>
     </>
